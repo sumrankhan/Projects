@@ -1,0 +1,237 @@
+﻿<%@ Master Language="C#"
+    AutoEventWireup="true"
+    CodeBehind="Site.master.cs"
+    Inherits="Admin_Panel.Site" %>
+
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+
+
+    <link href="../css/styles.css"
+        rel="stylesheet" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <title>Dashboard</title>
+</head>
+<body> 
+    <form id="form1" runat="server">
+        <div class="main-container">
+            <!-- Navbar for Admin portal  -->
+            <nav class="navbar">
+                <!-- Empty left section of the navbar  -->
+                <div class="nav-left-empty-section flex-center">
+                    <div class="image-cont">
+                        <img src="../images/logo-small.png" width="40" height="40"/>
+                    </div>
+                </div>
+
+                <!-- middle section of the navbar for search bar and burger menu -->
+                <div class="nav-center-section">
+                    <div class="icon m-lt-rt-10">
+                        <i
+                            class="fa-solid fa-bars"
+                            id="burgerMenu"
+                            onclick="openNav()">
+                        </i>
+                    </div>
+
+                    <div class="nav-search-bar flex-center">
+                        <input class="nav-input-area f-10"
+                            placeholder="Search" />
+
+                        <div class="nav-search-icon">
+                             <i class="fa-solid fa-magnifying-glass icon">
+                            </i>
+                        </div>
+                    </div>
+
+                    <div class="image-cont">
+                        <img src="../images/logo.png"
+                            width="150" height="40" />
+                    </div>
+                </div>
+                <div class="date-range f-10">
+                    <asp:Label
+                        CssClass="date-span"
+                        runat="server"
+                        Text="August 1, 2024 - August 31, 2024" />
+                </div>
+
+                <!-- right section of the navbar for user profile image -->
+                <div class="nav-right-section flex-center ">
+                    <div class=" round-bg-img flex-center">
+                        <%-- dropdown for the user img --%>
+                        <div class="dropdown dropbtn ">
+                            <img src="../images/boy.png" width="25" height="25"/>
+                           
+                            <div class="dropdown-content">
+                                <a href="../Mart_Profile/Mart_Profile.aspx">
+                                    Profile</a>
+                                <a href="../Settings/Main_Setting_Page.aspx">
+                                    Settings</a>
+                                <a href="../Sign_in/Sign_in.aspx">
+                                    Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Slider Side Menu -->
+
+
+
+            <div id="mySidenav" class="sidenav" >
+           
+                <img
+                    class="full-logo"
+                    src="../images/logo.png" width="150"
+                    alt="company logo" />
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <ul class="side-menu-ul">
+                    
+                    <a href="../Dashboard.aspx"
+                        class="side-menu-anchors">
+                        
+                        <li>
+                            <img src="../images/svgs/home.png" width="20" height="20"/>
+                            <span>Dashboard</span>
+                        </li>
+                    </a>
+                    
+                    <a href="../Manager/Manager_Dashboard.aspx" class="side-menu-anchors">
+                        <li>
+                            <img src="../images/svgs/management.png" width="20" height="20"/>
+                            <span>Manager Dashboard</span>
+                        </li>
+                    </a>
+                    
+                    <a href="../Rider/Dashboard.aspx"  class="side-menu-anchors">
+                        <li>
+                            <img src="../images/svgs/delivery-bike.png" width="20" height="20"/>
+                            <span>Rider Dashboard</span>
+                        </li>
+                    </a>
+                   <%-- <a href="../Rider/Rider_Completed_Orders.aspx" class="side-menu-anchors">
+                        <li>
+                            <img src="../images/svgs/home.png" width="20" height="20"/>
+                            <span>Rider Completed Order</span>
+                        </li>
+                    </a>--%>
+
+                    <%--<a href="../Products/Create_Product.aspx"
+                        class="side-menu-anchors">
+                        <li>
+                            <img src="../images/svgs/shopping-bag.png" width="20" height="20" />
+                            
+                            <span>Add Products</span>
+                        </li>
+                    </a>--%>
+
+                   <%-- <a href="../Products/Add_Product_Category.aspx"
+                        class="side-menu-anchors">
+                        <li>
+                            <img src="../images/svgs/category.png" width="20" height="20"/>
+                           
+                            <span>Add Category</span>
+                        </li>
+                    </a>--%>
+
+                    <a href="../Products/All_Products.aspx"
+                        class="side-menu-anchors">
+
+                        <li>
+                            <img src="../images/svgs/box.png" width="20" height="20"/>
+                            
+                            <span>View Products</span>
+                        </li>
+                    </a>
+                    <a href="../Customers/Customer_List.aspx"
+                        class="side-menu-anchors">
+                        <li>
+                            <img src="../images/svgs/customer.png" width="20" height="20" />
+                            
+                            <span>View Customers</span>
+                        </li>
+                    </a>
+                    <a href="../Customers/Customer_Feedback.aspx"
+                        class="side-menu-anchors">
+                        <li>
+                            <img src="../images/svgs/rate.png" width="20" height="20"/>
+                           
+                            <span>Feedback</span>
+                        </li>
+                    </a>
+
+                    <a href="../Sales_Report/Reports_Main_Page.aspx"
+                        class="side-menu-anchors">
+
+                        <li>
+                            <img src="../images/svgs/report.png"  width="20" height="20"/>
+                           
+                            <span>Reports</span>
+                        </li>
+                    </a>
+
+                    <a href="../Fake_Orders/Fake_Orders.aspx" class="side-menu-anchors">
+                        <li>
+                            <img src="../images/svgs/fake.png" width="20" height="20" />
+                            <span>Fake Orders</span>
+                        </li>
+                    </a>
+                    <a href="../Admin/User_List.aspx"
+                        class="side-menu-anchors">
+                        <li>
+                            <img src="../images/svgs/user.png" width="20" height="20" />
+                           
+                            <span>View User</span>
+                        </li>
+                    </a>
+
+                    <%--<a href="../Admin/Add_User.aspx"
+                        class="side-menu-anchors">
+                        <li>
+                            <img src="../images/svgs/add-user.png" width="20" height="20" />
+
+                            <span>Add User</span>
+                        </li>
+                    </a>--%>
+                    <a href="../Settings/Main_Setting_Page.aspx"
+                        class="side-menu-anchors">
+                        <li>
+                            <img src="../images/svgs/settings.png" width="20" height="20" />
+                            <span>Settings</span>
+                        </li>
+                    
+                     
+                    <a href="../Sign_in/Sign_in.aspx" class="side-menu-anchors">
+                        <li>
+                            <img src="../images/svgs/logout.png" width="20" height="20"/>
+                            <span>Logout</span>
+                        </li>
+                    </a>
+                </ul>
+
+                <div class="sidenav-footer">
+                    <span>Powered By <a href="https://www.trivsmart.com/">Smart Tech Solution</a></span>
+                </div>
+            </div>
+
+            <asp:ContentPlaceHolder
+                ID="body" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <!-- Script  -->
+        <script src="../script.js"></script>
+        
+    </form>
+</body>
+
+
+
+

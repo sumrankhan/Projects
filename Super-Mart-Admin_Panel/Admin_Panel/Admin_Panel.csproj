@@ -1,0 +1,1513 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.5.6.2\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.5.6.2\build\Microsoft.TypeScript.MSBuild.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A6F23326-5FBC-4FE3-B19C-07B2DC84989E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Admin_Panel</RootNamespace>
+    <AssemblyName>Admin_Panel</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44347</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Add_User.aspx" />
+    <Content Include="Admin\Delete.js" />
+    <Content Include="Admin\Edit_User.aspx" />
+    <Content Include="Admin\User_List.aspx" />
+    <Content Include="chart_script\apexcharts.js\.eslintrc.js" />
+    <Content Include="chart_script\apexcharts.js\.prettierrc.js" />
+    <Content Include="chart_script\apexcharts.js\babel.config.js" />
+    <Content Include="chart_script\apexcharts.js\build\build.js" />
+    <Content Include="chart_script\apexcharts.js\build\config.js" />
+    <Content Include="chart_script\apexcharts.js\dist\apexcharts.amd.js" />
+    <Content Include="chart_script\apexcharts.js\dist\apexcharts.amd.js.LICENSE.txt" />
+    <Content Include="chart_script\apexcharts.js\dist\apexcharts.common.js" />
+    <Content Include="chart_script\apexcharts.js\dist\apexcharts.css" />
+    <Content Include="chart_script\apexcharts.js\dist\apexcharts.esm.js" />
+    <Content Include="chart_script\apexcharts.js\dist\apexcharts.js" />
+    <Content Include="chart_script\apexcharts.js\dist\apexcharts.min.js" />
+    <Content Include="chart_script\apexcharts.js\jest.config.js" />
+    <Content Include="chart_script\apexcharts.js\nbproject\project.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\assets\github-data.js" />
+    <Content Include="chart_script\apexcharts.js\samples\assets\images\1101098.png" />
+    <Content Include="chart_script\apexcharts.js\samples\assets\images\2979121308_59539a3898_z.jpg" />
+    <Content Include="chart_script\apexcharts.js\samples\assets\images\4274635880_809a4b9d0d_z.jpg" />
+    <Content Include="chart_script\apexcharts.js\samples\assets\images\4679113782_ca13e2e6c0_z.jpg" />
+    <Content Include="chart_script\apexcharts.js\samples\assets\images\abstract.jpg" />
+    <Content Include="chart_script\apexcharts.js\samples\assets\images\clock.png" />
+    <Content Include="chart_script\apexcharts.js\samples\assets\images\ico-instagram.png" />
+    <Content Include="chart_script\apexcharts.js\samples\assets\images\ico-messenger.png" />
+    <Content Include="chart_script\apexcharts.js\samples\assets\images\stripes.jpg" />
+    <Content Include="chart_script\apexcharts.js\samples\assets\irregular-data-series.js" />
+    <Content Include="chart_script\apexcharts.js\samples\assets\ohlc.js" />
+    <Content Include="chart_script\apexcharts.js\samples\assets\stock-prices.js" />
+    <Content Include="chart_script\apexcharts.js\samples\assets\styles.css" />
+    <Content Include="chart_script\apexcharts.js\samples\playground\extract-samples.js" />
+    <Content Include="chart_script\apexcharts.js\samples\playground\options.js" />
+    <Content Include="chart_script\apexcharts.js\samples\react\area\area-datetime.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\area\area-github-style.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\area\area-spline.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\area\area-with-missing-data.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\area\area-with-negative.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\area\basic-area.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\area\multi-axis-with-seriesname-arrays.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\area\stacked-area.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\area\timeseries-with-irregular-data.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\bar\bar-with-custom-data-labels.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\bar\bar-with-images.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\bar\bar-with-markers.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\bar\bar-with-negative.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\bar\basic-bar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\bar\grouped-bar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\bar\grouped-stacked-bar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\bar\patterned-bar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\bar\reversed-bar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\bar\stacked-bar-100.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\bar\stacked-bar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\boxPlot\basic.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\boxPlot\boxplot-scatter.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\boxPlot\horizontal-boxplot.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\bubble\3d-bubble.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\bubble\simple-bubble.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\candlestick\basic.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\candlestick\candlestick-bar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\candlestick\candlestick-category.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\candlestick\candlestick-line.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\column\basic-column.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\column\border-radius-test.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\column\column-with-data-labels.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\column\column-with-group-label.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\column\column-with-markers.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\column\column-with-negative.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\column\column-with-rotated-data-labels.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\column\column-with-rotated-labels.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\column\data-color.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\column\distributed-columns.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\column\dumbbell-chart.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\column\dynamic-loaded-chart.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\column\grouped-stacked-column.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\column\range-column.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\column\stacked-column-100.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\column\stacked-column-outline.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\column\stacked-column-with-line-new.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\column\stacked-column-with-line.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\column\stacked-column.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\funnel\funnel.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\funnel\pyramid.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\heatmap\basic.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\heatmap\color-range.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\heatmap\image-fill.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\heatmap\multiple-color-scales-flipped.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\heatmap\multiple-color.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\heatmap\rounded.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\line\basic-line.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\line\brush-charts.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\line\dashed-line.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\line\gradient-line.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\line\line-with-annotations.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\line\line-with-data-labels.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\line\line-with-image.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\line\line-with-missing-data.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\line\linestep.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\line\logarithmic-line.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\line\realtime.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\line\stepline.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\line\syncing-charts.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\line\zoomable-timeseries.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\misc\annotations-example.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\misc\minMaxPoints.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\misc\no-data.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\misc\range-annotations-inverted-axis-example.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\mixed\duplicate-labels.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\mixed\line-area.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\mixed\line-column-area-stacked-grouped.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\mixed\line-column-area.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\mixed\line-column.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\mixed\line-scatter.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\mixed\multiple-yaxes.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\pie\donut-update.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\pie\donut-with-pattern.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\pie\gradient-donut.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\pie\monochrome-pie.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\pie\pie-with-image.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\pie\semi-donut.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\pie\simple-donut.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\pie\simple-pie.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\polarArea\basic-polar-area.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\polarArea\polar-area-monochrome.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\radar\basic-radar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\radar\radar-multiple-series.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\radar\radar-with-polygon-fill.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\radialBar\circle-chart-multiple.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\radialBar\circle-chart-with-image.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\radialBar\circle-chart.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\radialBar\circle-custom-angle.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\radialBar\circle-gradient.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\radialBar\semi-circle-chart.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\radialBar\stroked-gauge.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\rangeArea\basic-range-area.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\rangeArea\range-area-line-combo-monotoneCubic.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\rangeArea\range-area-line-combo.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\scatter\scatter-basic.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\scatter\scatter-datetime.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\scatter\scatter-images.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\slope\basic.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\slope\slope-style-2.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\sparklines\sparklines.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\timelines\advanced.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\timelines\brush-rangebars.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\timelines\controlling-colors.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\timelines\dumbbell-chart-horizontal.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\timelines\multi-series-group-rows.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\timelines\multi-series.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\timelines\simple.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\treemap\basic.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\treemap\color-scale.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\treemap\distributed.html" />
+    <Content Include="chart_script\apexcharts.js\samples\react\treemap\multi-dimensional.html" />
+    <Content Include="chart_script\apexcharts.js\samples\requirejs\app.js" />
+    <Content Include="chart_script\apexcharts.js\samples\requirejs\app\main.js" />
+    <Content Include="chart_script\apexcharts.js\samples\requirejs\index.html" />
+    <Content Include="chart_script\apexcharts.js\samples\source\area\area-datetime.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\area\area-github-style.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\area\area-spline.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\area\area-with-missing-data.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\area\area-with-negative.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\area\basic-area.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\area\multi-axis-with-seriesname-arrays.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\area\stacked-area.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\area\timeseries-with-irregular-data.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\bar\bar-with-custom-data-labels.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\bar\bar-with-images.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\bar\bar-with-markers.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\bar\bar-with-negative.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\bar\basic-bar.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\bar\grouped-bar.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\bar\grouped-stacked-bar.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\bar\patterned-bar.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\bar\reversed-bar.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\bar\stacked-bar-100.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\bar\stacked-bar.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\boxPlot\basic.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\boxPlot\boxplot-scatter.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\boxPlot\horizontal-boxplot.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\bubble\3d-bubble.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\bubble\simple-bubble.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\candlestick\basic.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\candlestick\candlestick-bar.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\candlestick\candlestick-category.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\candlestick\candlestick-line.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\column\basic-column.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\column\border-radius-test.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\column\column-with-data-labels.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\column\column-with-group-label.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\column\column-with-markers.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\column\column-with-negative.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\column\column-with-rotated-data-labels.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\column\column-with-rotated-labels.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\column\data-color.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\column\distributed-columns.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\column\dumbbell-chart.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\column\dynamic-loaded-chart.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\column\grouped-stacked-column.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\column\range-column.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\column\stacked-column-100.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\column\stacked-column-outline.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\column\stacked-column-with-line-new.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\column\stacked-column-with-line.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\column\stacked-column.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\dashboards\dark\assets\scripts.js" />
+    <Content Include="chart_script\apexcharts.js\samples\source\dashboards\dark\assets\styles.css" />
+    <Content Include="chart_script\apexcharts.js\samples\source\dashboards\dark\index.html" />
+    <Content Include="chart_script\apexcharts.js\samples\source\dashboards\material\assets\scripts.js" />
+    <Content Include="chart_script\apexcharts.js\samples\source\dashboards\material\assets\styles.css" />
+    <Content Include="chart_script\apexcharts.js\samples\source\dashboards\material\index.html" />
+    <Content Include="chart_script\apexcharts.js\samples\source\dashboards\modern\assets\data.js" />
+    <Content Include="chart_script\apexcharts.js\samples\source\dashboards\modern\assets\img\banana.png" />
+    <Content Include="chart_script\apexcharts.js\samples\source\dashboards\modern\assets\img\logo.png" />
+    <Content Include="chart_script\apexcharts.js\samples\source\dashboards\modern\assets\img\map.png" />
+    <Content Include="chart_script\apexcharts.js\samples\source\dashboards\modern\assets\img\tellius.png" />
+    <Content Include="chart_script\apexcharts.js\samples\source\dashboards\modern\assets\img\user.png" />
+    <Content Include="chart_script\apexcharts.js\samples\source\dashboards\modern\assets\scripts.js" />
+    <Content Include="chart_script\apexcharts.js\samples\source\dashboards\modern\assets\styles.css" />
+    <Content Include="chart_script\apexcharts.js\samples\source\dashboards\modern\index.html" />
+    <Content Include="chart_script\apexcharts.js\samples\source\dashboards\realtime\assets\edit-on-codepen.png" />
+    <Content Include="chart_script\apexcharts.js\samples\source\dashboards\realtime\assets\scripts.js" />
+    <Content Include="chart_script\apexcharts.js\samples\source\dashboards\realtime\assets\styles.css" />
+    <Content Include="chart_script\apexcharts.js\samples\source\dashboards\realtime\index.html" />
+    <Content Include="chart_script\apexcharts.js\samples\source\funnel\funnel.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\funnel\pyramid.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\heatmap\basic.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\heatmap\color-range.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\heatmap\image-fill.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\heatmap\multiple-color-scales-flipped.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\heatmap\multiple-color.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\heatmap\rounded.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\index.js" />
+    <Content Include="chart_script\apexcharts.js\samples\source\line\basic-line.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\line\brush-charts.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\line\dashed-line.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\line\gradient-line.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\line\line-with-annotations.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\line\line-with-data-labels.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\line\line-with-image.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\line\line-with-missing-data.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\line\linestep.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\line\logarithmic-line.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\line\realtime.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\line\stepline.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\line\syncing-charts.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\line\zoomable-timeseries.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\misc\annotations-example.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\misc\axios.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\misc\custom-legend.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\misc\init-from-attrs.html" />
+    <Content Include="chart_script\apexcharts.js\samples\source\misc\jquery.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\misc\minMaxPoints.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\misc\no-data.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\misc\range-annotations-inverted-axis-example.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\mixed\duplicate-labels.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\mixed\line-area.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\mixed\line-column-area-stacked-grouped.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\mixed\line-column-area.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\mixed\line-column.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\mixed\line-scatter.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\mixed\multiple-yaxes.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\pie\donut-update.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\pie\donut-with-pattern.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\pie\gradient-donut.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\pie\monochrome-pie.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\pie\pie-with-image.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\pie\semi-donut.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\pie\simple-donut.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\pie\simple-pie.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\polarArea\basic-polar-area.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\polarArea\polar-area-monochrome.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\radar\basic-radar.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\radar\radar-multiple-series.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\radar\radar-with-polygon-fill.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\radialBar\circle-chart-multiple.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\radialBar\circle-chart-with-image.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\radialBar\circle-chart.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\radialBar\circle-custom-angle.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\radialBar\circle-gradient.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\radialBar\semi-circle-chart.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\radialBar\stroked-gauge.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\rangeArea\basic-range-area.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\rangeArea\range-area-line-combo-monotoneCubic.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\rangeArea\range-area-line-combo.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\scatter\scatter-basic.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\scatter\scatter-datetime.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\scatter\scatter-images.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\slope\basic.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\slope\slope-style-2.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\sparklines\sparklines.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\template.html" />
+    <Content Include="chart_script\apexcharts.js\samples\source\template.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\timelines\advanced.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\timelines\brush-rangebars.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\timelines\controlling-colors.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\timelines\dumbbell-chart-horizontal.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\timelines\multi-series-group-rows.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\timelines\multi-series.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\timelines\simple.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\treemap\basic.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\treemap\color-scale.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\treemap\distributed.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\source\treemap\multi-dimensional.xml" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-bottom-text-anchor-end-series-mixed.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-bottom-text-anchor-end-series-neg.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-bottom-text-anchor-end-series-pos.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-bottom-text-anchor-middle-series-mixed.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-bottom-text-anchor-middle-series-neg.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-bottom-text-anchor-middle-series-pos.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-bottom-text-anchor-start-series-mixed.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-bottom-text-anchor-start-series-neg.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-bottom-text-anchor-start-series-pos.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-center-text-anchor-end-series-mixed.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-center-text-anchor-end-series-neg.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-center-text-anchor-end-series-pos.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-center-text-anchor-middle-series-mixed.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-center-text-anchor-middle-series-neg.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-center-text-anchor-middle-series-pos.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-center-text-anchor-start-series-mixed.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-center-text-anchor-start-series-neg.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-center-text-anchor-start-series-pos.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-top-text-anchor-end-series-mixed.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-top-text-anchor-end-series-neg.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-top-text-anchor-end-series-pos.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-top-text-anchor-middle-series-mixed.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-top-text-anchor-middle-series-neg.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-top-text-anchor-middle-series-pos.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-top-text-anchor-start-series-mixed.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-top-text-anchor-start-series-neg.html" />
+    <Content Include="chart_script\apexcharts.js\samples\tests\datalabels\bar\position-top-text-anchor-start-series-pos.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\area\area-datetime.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\area\area-github-style.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\area\area-spline.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\area\area-with-missing-data.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\area\area-with-negative.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\area\basic-area.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\area\multi-axis-with-seriesname-arrays.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\area\stacked-area.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\area\timeseries-with-irregular-data.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\bar\bar-with-custom-data-labels.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\bar\bar-with-images.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\bar\bar-with-markers.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\bar\bar-with-negative.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\bar\basic-bar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\bar\grouped-bar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\bar\grouped-stacked-bar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\bar\patterned-bar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\bar\reversed-bar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\bar\stacked-bar-100.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\bar\stacked-bar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\boxPlot\basic.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\boxPlot\boxplot-scatter.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\boxPlot\horizontal-boxplot.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\bubble\3d-bubble.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\bubble\simple-bubble.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\candlestick\basic.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\candlestick\candlestick-bar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\candlestick\candlestick-category.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\candlestick\candlestick-line.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\column\basic-column.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\column\border-radius-test.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\column\column-with-data-labels.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\column\column-with-group-label.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\column\column-with-markers.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\column\column-with-negative.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\column\column-with-rotated-data-labels.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\column\column-with-rotated-labels.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\column\data-color.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\column\distributed-columns.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\column\dumbbell-chart.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\column\dynamic-loaded-chart.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\column\grouped-stacked-column.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\column\range-column.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\column\stacked-column-100.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\column\stacked-column-outline.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\column\stacked-column-with-line-new.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\column\stacked-column-with-line.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\column\stacked-column.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\dashboards\dark\assets\scripts.js" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\dashboards\dark\assets\styles.css" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\dashboards\dark\index.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\dashboards\material\assets\scripts.js" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\dashboards\material\assets\styles.css" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\dashboards\material\index.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\dashboards\modern\assets\data.js" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\dashboards\modern\assets\img\banana.png" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\dashboards\modern\assets\img\logo.png" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\dashboards\modern\assets\img\map.png" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\dashboards\modern\assets\img\tellius.png" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\dashboards\modern\assets\img\user.png" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\dashboards\modern\assets\scripts.js" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\dashboards\modern\assets\styles.css" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\dashboards\modern\index.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\dashboards\realtime\assets\edit-on-codepen.png" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\dashboards\realtime\assets\scripts.js" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\dashboards\realtime\assets\styles.css" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\dashboards\realtime\index.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\funnel\funnel.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\funnel\pyramid.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\heatmap\basic.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\heatmap\color-range.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\heatmap\image-fill.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\heatmap\multiple-color-scales-flipped.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\heatmap\multiple-color.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\heatmap\rounded.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\line\basic-line.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\line\brush-charts.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\line\dashed-line.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\line\gradient-line.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\line\line-with-annotations.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\line\line-with-data-labels.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\line\line-with-image.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\line\line-with-missing-data.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\line\linestep.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\line\logarithmic-line.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\line\realtime.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\line\stepline.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\line\syncing-charts.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\line\zoomable-timeseries.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\misc\annotations-example.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\misc\axios.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\misc\custom-legend.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\misc\init-from-attrs.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\misc\jquery.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\misc\minMaxPoints.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\misc\no-data.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\misc\range-annotations-inverted-axis-example.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\mixed\duplicate-labels.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\mixed\line-area.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\mixed\line-column-area-stacked-grouped.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\mixed\line-column-area.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\mixed\line-column.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\mixed\line-scatter.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\mixed\multiple-yaxes.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\pie\donut-update.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\pie\donut-with-pattern.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\pie\gradient-donut.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\pie\monochrome-pie.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\pie\pie-with-image.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\pie\semi-donut.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\pie\simple-donut.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\pie\simple-pie.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\polarArea\basic-polar-area.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\polarArea\polar-area-monochrome.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\radar\basic-radar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\radar\radar-multiple-series.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\radar\radar-with-polygon-fill.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\radialBar\circle-chart-multiple.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\radialBar\circle-chart-with-image.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\radialBar\circle-chart.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\radialBar\circle-custom-angle.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\radialBar\circle-gradient.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\radialBar\semi-circle-chart.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\radialBar\stroked-gauge.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\rangeArea\basic-range-area.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\rangeArea\range-area-line-combo-monotoneCubic.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\rangeArea\range-area-line-combo.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\scatter\scatter-basic.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\scatter\scatter-datetime.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\scatter\scatter-images.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\slope\basic.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\slope\slope-style-2.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\sparklines\sparklines.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\timelines\advanced.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\timelines\brush-rangebars.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\timelines\controlling-colors.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\timelines\dumbbell-chart-horizontal.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\timelines\multi-series-group-rows.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\timelines\multi-series.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\timelines\simple.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\treemap\basic.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\treemap\color-scale.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\treemap\distributed.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vanilla-js\treemap\multi-dimensional.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\area\area-datetime.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\area\area-github-style.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\area\area-spline.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\area\area-with-missing-data.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\area\area-with-negative.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\area\basic-area.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\area\multi-axis-with-seriesname-arrays.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\area\stacked-area.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\area\timeseries-with-irregular-data.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\bar\bar-with-custom-data-labels.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\bar\bar-with-images.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\bar\bar-with-markers.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\bar\bar-with-negative.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\bar\basic-bar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\bar\grouped-bar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\bar\grouped-stacked-bar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\bar\patterned-bar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\bar\reversed-bar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\bar\stacked-bar-100.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\bar\stacked-bar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\boxPlot\basic.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\boxPlot\boxplot-scatter.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\boxPlot\horizontal-boxplot.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\bubble\3d-bubble.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\bubble\simple-bubble.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\candlestick\basic.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\candlestick\candlestick-bar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\candlestick\candlestick-category.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\candlestick\candlestick-line.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\column\basic-column.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\column\border-radius-test.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\column\column-with-data-labels.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\column\column-with-group-label.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\column\column-with-markers.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\column\column-with-negative.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\column\column-with-rotated-data-labels.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\column\column-with-rotated-labels.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\column\data-color.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\column\distributed-columns.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\column\dumbbell-chart.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\column\dynamic-loaded-chart.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\column\grouped-stacked-column.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\column\range-column.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\column\stacked-column-100.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\column\stacked-column-outline.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\column\stacked-column-with-line-new.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\column\stacked-column-with-line.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\column\stacked-column.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\funnel\funnel.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\funnel\pyramid.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\heatmap\basic.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\heatmap\color-range.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\heatmap\image-fill.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\heatmap\multiple-color-scales-flipped.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\heatmap\multiple-color.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\heatmap\rounded.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\line\basic-line.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\line\brush-charts.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\line\dashed-line.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\line\gradient-line.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\line\line-with-annotations.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\line\line-with-data-labels.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\line\line-with-image.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\line\line-with-missing-data.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\line\linestep.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\line\logarithmic-line.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\line\realtime.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\line\stepline.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\line\syncing-charts.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\line\zoomable-timeseries.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\misc\annotations-example.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\misc\minMaxPoints.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\misc\no-data.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\misc\range-annotations-inverted-axis-example.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\mixed\duplicate-labels.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\mixed\line-area.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\mixed\line-column-area-stacked-grouped.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\mixed\line-column-area.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\mixed\line-column.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\mixed\line-scatter.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\mixed\multiple-yaxes.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\pie\donut-update.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\pie\donut-with-pattern.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\pie\gradient-donut.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\pie\monochrome-pie.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\pie\pie-with-image.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\pie\semi-donut.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\pie\simple-donut.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\pie\simple-pie.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\polarArea\basic-polar-area.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\polarArea\polar-area-monochrome.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\radar\basic-radar.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\radar\radar-multiple-series.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\radar\radar-with-polygon-fill.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\radialBar\circle-chart-multiple.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\radialBar\circle-chart-with-image.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\radialBar\circle-chart.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\radialBar\circle-custom-angle.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\radialBar\circle-gradient.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\radialBar\semi-circle-chart.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\radialBar\stroked-gauge.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\rangeArea\basic-range-area.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\rangeArea\range-area-line-combo-monotoneCubic.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\rangeArea\range-area-line-combo.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\scatter\scatter-basic.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\scatter\scatter-datetime.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\scatter\scatter-images.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\slope\basic.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\slope\slope-style-2.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\sparklines\sparklines.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\timelines\advanced.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\timelines\brush-rangebars.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\timelines\controlling-colors.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\timelines\dumbbell-chart-horizontal.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\timelines\multi-series-group-rows.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\timelines\multi-series.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\timelines\simple.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\treemap\basic.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\treemap\color-scale.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\treemap\distributed.html" />
+    <Content Include="chart_script\apexcharts.js\samples\vue\treemap\multi-dimensional.html" />
+    <Content Include="chart_script\apexcharts.js\src\apexcharts.js" />
+    <Content Include="chart_script\apexcharts.js\src\assets\apexcharts.css" />
+    <Content Include="chart_script\apexcharts.js\src\assets\ico-camera.svg" />
+    <Content Include="chart_script\apexcharts.js\src\assets\ico-home.svg" />
+    <Content Include="chart_script\apexcharts.js\src\assets\ico-menu.svg" />
+    <Content Include="chart_script\apexcharts.js\src\assets\ico-minus-square.svg" />
+    <Content Include="chart_script\apexcharts.js\src\assets\ico-minus.svg" />
+    <Content Include="chart_script\apexcharts.js\src\assets\ico-pan-hand.svg" />
+    <Content Include="chart_script\apexcharts.js\src\assets\ico-pan.svg" />
+    <Content Include="chart_script\apexcharts.js\src\assets\ico-plus-square.svg" />
+    <Content Include="chart_script\apexcharts.js\src\assets\ico-plus.svg" />
+    <Content Include="chart_script\apexcharts.js\src\assets\ico-refresh.svg" />
+    <Content Include="chart_script\apexcharts.js\src\assets\ico-reset.svg" />
+    <Content Include="chart_script\apexcharts.js\src\assets\ico-select.svg" />
+    <Content Include="chart_script\apexcharts.js\src\assets\ico-select1.svg" />
+    <Content Include="chart_script\apexcharts.js\src\assets\ico-zoom-in.svg" />
+    <Content Include="chart_script\apexcharts.js\src\assets\ico-zoom-out.svg" />
+    <Content Include="chart_script\apexcharts.js\src\assets\ico-zoom.svg" />
+    <Content Include="chart_script\apexcharts.js\src\charts\Bar.js" />
+    <Content Include="chart_script\apexcharts.js\src\charts\BarStacked.js" />
+    <Content Include="chart_script\apexcharts.js\src\charts\BoxCandleStick.js" />
+    <Content Include="chart_script\apexcharts.js\src\charts\common\bar\DataLabels.js" />
+    <Content Include="chart_script\apexcharts.js\src\charts\common\bar\Helpers.js" />
+    <Content Include="chart_script\apexcharts.js\src\charts\common\circle\Helpers.js" />
+    <Content Include="chart_script\apexcharts.js\src\charts\common\line\Helpers.js" />
+    <Content Include="chart_script\apexcharts.js\src\charts\common\treemap\Helpers.js" />
+    <Content Include="chart_script\apexcharts.js\src\charts\HeatMap.js" />
+    <Content Include="chart_script\apexcharts.js\src\charts\Line.js" />
+    <Content Include="chart_script\apexcharts.js\src\charts\Pie.js" />
+    <Content Include="chart_script\apexcharts.js\src\charts\Radar.js" />
+    <Content Include="chart_script\apexcharts.js\src\charts\Radial.js" />
+    <Content Include="chart_script\apexcharts.js\src\charts\RangeBar.js" />
+    <Content Include="chart_script\apexcharts.js\src\charts\Scatter.js" />
+    <Content Include="chart_script\apexcharts.js\src\charts\Treemap.js" />
+    <Content Include="chart_script\apexcharts.js\src\libs\monotone-cubic.js" />
+    <Content Include="chart_script\apexcharts.js\src\libs\Treemap-squared.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\Animations.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\annotations\Annotations.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\annotations\Helpers.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\annotations\PointsAnnotations.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\annotations\XAxisAnnotations.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\annotations\YAxisAnnotations.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\axes\Axes.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\axes\AxesUtils.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\axes\Grid.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\axes\XAxis.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\axes\YAxis.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\Base.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\Core.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\CoreUtils.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\Crosshairs.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\Data.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\DataLabels.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\dimensions\Dimensions.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\dimensions\Grid.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\dimensions\Helpers.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\dimensions\XAxis.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\dimensions\YAxis.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\Events.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\Exports.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\Fill.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\Filters.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\Formatters.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\Graphics.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\helpers\Destroy.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\helpers\InitCtxVariables.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\helpers\Localization.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\helpers\UpdateHelpers.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\legend\Helpers.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\legend\Legend.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\Markers.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\Range.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\Responsive.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\Scales.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\Series.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\settings\Config.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\settings\Defaults.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\settings\Globals.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\settings\Options.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\Theme.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\TimeScale.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\TitleSubtitle.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\Toolbar.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\tooltip\AxesTooltip.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\tooltip\Intersect.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\tooltip\Labels.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\tooltip\Marker.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\tooltip\Position.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\tooltip\Tooltip.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\tooltip\Utils.js" />
+    <Content Include="chart_script\apexcharts.js\src\modules\ZoomPanSelection.js" />
+    <Content Include="chart_script\apexcharts.js\src\svgjs\svg.pathmorphing.js" />
+    <Content Include="chart_script\apexcharts.js\src\utils\DateTime.js" />
+    <Content Include="chart_script\apexcharts.js\src\utils\Resize.js" />
+    <Content Include="chart_script\apexcharts.js\src\utils\Utils.js" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\samples.js" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\area\area-datetime.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\area\area-github-style.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\area\area-spline.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\area\area-with-missing-data.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\area\area-with-negative.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\area\basic-area.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\area\multi-axis-with-seriesname-arrays.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\area\stacked-area.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\area\timeseries-with-irregular-data.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\bar\bar-with-custom-data-labels.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\bar\bar-with-images.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\bar\bar-with-markers.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\bar\bar-with-negative.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\bar\basic-bar.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\bar\grouped-bar.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\bar\grouped-stacked-bar.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\bar\patterned-bar.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\bar\reversed-bar.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\bar\stacked-bar-100.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\bar\stacked-bar.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\boxPlot\basic.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\boxPlot\boxplot-scatter.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\boxPlot\horizontal-boxplot.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\bubble\3d-bubble.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\bubble\simple-bubble.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\candlestick\basic.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\candlestick\candlestick-bar.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\candlestick\candlestick-category.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\candlestick\candlestick-line.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\column\basic-column.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\column\column-with-data-labels.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\column\column-with-group-label.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\column\column-with-markers.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\column\column-with-negative.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\column\column-with-rotated-data-labels.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\column\column-with-rotated-labels.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\column\data-color.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\column\distributed-columns.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\column\dumbbell-chart.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\column\dynamic-loaded-chart.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\column\grouped-stacked-column.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\column\range-column.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\column\stacked-column-100.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\column\stacked-column-with-line-new.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\column\stacked-column-with-line.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\column\stacked-column.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\funnel\funnel.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\funnel\pyramid.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\heatmap\basic.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\heatmap\color-range.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\heatmap\image-fill.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\heatmap\multiple-color-scales-flipped.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\heatmap\multiple-color.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\heatmap\rounded.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\line\basic-line.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\line\brush-charts.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\line\dashed-line.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\line\gradient-line.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\line\line-with-annotations.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\line\line-with-data-labels.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\line\line-with-image.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\line\line-with-missing-data.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\line\linestep.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\line\logarithmic-line.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\line\realtime.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\line\stepline.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\line\syncing-charts.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\line\zoomable-timeseries.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\misc\annotations-example.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\misc\axios.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\misc\custom-legend.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\misc\jquery.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\misc\minMaxPoints.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\misc\no-data.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\misc\range-annotations-inverted-axis-example.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\mixed\duplicate-labels.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\mixed\line-area.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\mixed\line-column-area-stacked-grouped.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\mixed\line-column-area.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\mixed\line-column.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\mixed\line-scatter.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\mixed\multiple-yaxes.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\pie\donut-update.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\pie\donut-with-pattern.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\pie\gradient-donut.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\pie\monochrome-pie.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\pie\pie-with-image.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\pie\semi-donut.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\pie\simple-donut.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\pie\simple-pie.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\polarArea\basic-polar-area.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\polarArea\polar-area-monochrome.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\radar\basic-radar.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\radar\radar-multiple-series.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\radar\radar-with-polygon-fill.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\radialBar\circle-chart-multiple.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\radialBar\circle-chart-with-image.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\radialBar\circle-chart.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\radialBar\circle-custom-angle.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\radialBar\circle-gradient.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\radialBar\semi-circle-chart.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\radialBar\stroked-gauge.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\rangeArea\basic-range-area.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\rangeArea\range-area-line-combo-monotoneCubic.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\rangeArea\range-area-line-combo.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\scatter\scatter-basic.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\scatter\scatter-datetime.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\scatter\scatter-images.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\slope\basic.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\slope\slope-style-2.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\sparklines\sparklines.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\timelines\advanced.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\timelines\brush-rangebars.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\timelines\controlling-colors.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\timelines\dumbbell-chart-horizontal.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\timelines\multi-series-group-rows.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\timelines\multi-series.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\timelines\simple.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\treemap\basic.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\treemap\color-scale.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\treemap\distributed.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\snapshots\treemap\multi-dimensional.png" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\spec\area\area-github-style.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\spec\area\area.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\spec\area\missing-data.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\spec\bar\bar.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\spec\bar\reversed-bar.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\spec\bubble\bubble.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\spec\candlestick\candlestick.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\spec\column\column.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\spec\heatmap\heatmap.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\spec\line\line.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\spec\line\missing-data.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\spec\mixed\mixed.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\spec\pie\pie.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\spec\radar\basic-radar.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\spec\radialBar\radialBar.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\spec\scatter\scatter.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\spec\sparklines\sparklines.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\spec\timelines\timeline.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\e2e\spec\utils.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\bar-chart.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\core.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\data\log-data.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\data\null-data.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\data\sample-data.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\data\sample-formatters.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\data\series2dArrayNumeric.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\data\series2dArrayTimestamp.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\data\seriesOHLC.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\data\seriesxy.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\download-csv.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\exponential-data.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\formatters.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\multiple-scales.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\nonce.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\small-range.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\timescale.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\user-options-priority.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\utils\svg-transform.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\utils\utils.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\xaxis.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\yaxis-min-max.spec.js" />
+    <Content Include="chart_script\apexcharts.js\tests\unit\__mocks__\ResizeObserver.js" />
+    <Content Include="chart_script\apexcharts.js\webpack.config.js" />
+    <Content Include="chart_script\apexcharts.min.js" />
+    <Content Include="chart_script\highcharts.js" />
+    <Content Include="chart_script\highcharts\highcharts.js" />
+    <Content Include="css.css" />
+    <Content Include="css\styles.css" />
+    <Content Include="Customers\Customer_Feedback.aspx" />
+    <Content Include="Customers\Customer_List.aspx" />
+    <Content Include="Customers\Customer_Order_History.aspx" />
+    <Content Include="Customers\Order_Invoice.aspx" />
+    <Content Include="Customers\Thermal_Recipt.aspx" />
+    <Content Include="Custom_Logo\Custom_Logo.aspx" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="Fake_Orders\Fake_Orders.aspx" />
+    <Content Include="images\Bluetooth Headphones.png" />
+    <Content Include="images\bluetoothspeaker.jfif" />
+    <Content Include="images\boy.png" />
+    <Content Include="images\camera-img.png" />
+    <Content Include="images\gaming laptop.jpg" />
+    <Content Include="images\GIF\nice.gif" />
+    <Content Include="images\hd-carrefour-arabic-logo-png-701751694712964ehfkzkx434.png" />
+    <Content Include="images\Keyboard.png" />
+    <Content Include="images\logo-small.png" />
+    <Content Include="images\Portable Charger.png" />
+    <Content Include="images\icon.png" />
+    <Content Include="images\login-bg-1.jpg" />
+    <Content Include="images\login-bg.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\New_white_smartTech_logo.png" />
+    <Content Include="images\Noise Cancelling Headphones.jpg" />
+    <Content Include="images\progress chart.png" />
+    <Content Include="images\Smart-Home-Hub.jpg" />
+    <Content Include="images\smart tv.png" />
+    <Content Include="images\smart-black-logo.png" />
+    <Content Include="images\sts mini logo.png" />
+    <Content Include="images\svgs\add-user.png" />
+    <Content Include="images\svgs\box.png" />
+    <Content Include="images\svgs\category.png" />
+    <Content Include="images\svgs\customer.png" />
+    <Content Include="images\svgs\delivery-bike.png" />
+    <Content Include="images\svgs\fake.png" />
+    <Content Include="images\svgs\logout.png" />
+    <Content Include="images\svgs\management.png" />
+    <Content Include="images\svgs\rate.png" />
+    <Content Include="images\svgs\report.png" />
+    <Content Include="images\svgs\settings.png" />
+    <Content Include="images\svgs\shopping-bag.png" />
+    <Content Include="images\svgs\user.png" />
+    <Content Include="images\usb-c.png" />
+    <Content Include="images\wireless mouse.png" />
+    <Content Include="Manager\Manager_Dashboard.aspx" />
+    <Content Include="Mart_Profile\Mart_Profile.aspx" />
+    <Content Include="Products\Add_Product_Category.aspx" />
+    <Content Include="Products\All_Products.aspx" />
+    <Content Include="Products\Create_Product.aspx" />
+    <Content Include="Products\Edit_Product.aspx" />
+    <Content Include="Rider\Dashboard.aspx" />
+    <Content Include="Rider\Rider_Completed_Orders.aspx" />
+    <Content Include="Sales_Report\Abondoned_Cart_Report.aspx" />
+    <Content Include="Sales_Report\Conversion_Rate_Report.aspx" />
+    <Content Include="Sales_Report\Customer_Lifetime_Value_Report.aspx" />
+    <Content Include="Sales_Report\Daily_Weekly_Monthly_Sales_Report.aspx" />
+    <Content Include="Sales_Report\Discount_Coupon_Report.aspx" />
+    <Content Include="Sales_Report\Inventory_Stock_Report.aspx" />
+    <Content Include="Sales_Report\Orders_Report.aspx" />
+    <Content Include="Sales_Report\Payment_Method_Report.aspx" />
+    <Content Include="Sales_Report\Profit_Margin_Report.aspx" />
+    <Content Include="Sales_Report\Reports_Main_Page.aspx" />
+    <Content Include="Sales_Report\Returns_Refunds_Report.aspx" />
+    <Content Include="Sales_Report\Sales_By_Category_Report.aspx" />
+    <Content Include="Sales_Report\Sales_By_Channel_Report.aspx" />
+    <Content Include="Sales_Report\Sales_By_Customer_Report.aspx" />
+    <Content Include="Sales_Report\Sales_By_Region_Report.aspx" />
+    <Content Include="Sales_Report\Sales_By_Specific_Category_Report.aspx" />
+    <Content Include="Sales_Report\Sales_By_Specific_Product_Report.aspx" />
+    <Content Include="Sales_Report\Sales_By_Top_Product_Report.aspx" />
+    <Content Include="Sales_Report\Total_Sales_Report.aspx" />
+    <Content Include="script.js" />
+    <Content Include="Settings\Main_Setting_Page.aspx" />
+    <Content Include="Sign_in\Sign_in.aspx" />
+    <Content Include="Sign_up\Sign_up.aspx" />
+    <Content Include="Statement\Statement.aspx" />
+    <Content Include="Statement\View_Statement.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Add_User.aspx.cs">
+      <DependentUpon>Add_User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Add_User.aspx.designer.cs">
+      <DependentUpon>Add_User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Edit_User.aspx.cs">
+      <DependentUpon>Edit_User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Edit_User.aspx.designer.cs">
+      <DependentUpon>Edit_User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User_List.aspx.cs">
+      <DependentUpon>User_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\User_List.aspx.designer.cs">
+      <DependentUpon>User_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\Customer_Feedback.aspx.cs">
+      <DependentUpon>Customer_Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customers\Customer_Feedback.aspx.designer.cs">
+      <DependentUpon>Customer_Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\Customer_List.aspx.cs">
+      <DependentUpon>Customer_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customers\Customer_List.aspx.designer.cs">
+      <DependentUpon>Customer_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\Customer_Order_History.aspx.cs">
+      <DependentUpon>Customer_Order_History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customers\Customer_Order_History.aspx.designer.cs">
+      <DependentUpon>Customer_Order_History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\Order_Invoice.aspx.cs">
+      <DependentUpon>Order_Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customers\Order_Invoice.aspx.designer.cs">
+      <DependentUpon>Order_Invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\Thermal_Recipt.aspx.cs">
+      <DependentUpon>Thermal_Recipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customers\Thermal_Recipt.aspx.designer.cs">
+      <DependentUpon>Thermal_Recipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Custom_Logo\Custom_Logo.aspx.cs">
+      <DependentUpon>Custom_Logo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom_Logo\Custom_Logo.aspx.designer.cs">
+      <DependentUpon>Custom_Logo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fake_Orders\Fake_Orders.aspx.cs">
+      <DependentUpon>Fake_Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fake_Orders\Fake_Orders.aspx.designer.cs">
+      <DependentUpon>Fake_Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Manager_Dashboard.aspx.cs">
+      <DependentUpon>Manager_Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Manager_Dashboard.aspx.designer.cs">
+      <DependentUpon>Manager_Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mart_Profile\Mart_Profile.aspx.cs">
+      <DependentUpon>Mart_Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mart_Profile\Mart_Profile.aspx.designer.cs">
+      <DependentUpon>Mart_Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Add_Product_Category.aspx.cs">
+      <DependentUpon>Add_Product_Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Add_Product_Category.aspx.designer.cs">
+      <DependentUpon>Add_Product_Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\All_Products.aspx.cs">
+      <DependentUpon>All_Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\All_Products.aspx.designer.cs">
+      <DependentUpon>All_Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Create_Product.aspx.cs">
+      <DependentUpon>Create_Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Create_Product.aspx.designer.cs">
+      <DependentUpon>Create_Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Edit_Product.aspx.cs">
+      <DependentUpon>Edit_Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Edit_Product.aspx.designer.cs">
+      <DependentUpon>Edit_Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rider\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rider\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rider\Rider_Completed_Orders.aspx.cs">
+      <DependentUpon>Rider_Completed_Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rider\Rider_Completed_Orders.aspx.designer.cs">
+      <DependentUpon>Rider_Completed_Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Report\Abondoned_Cart_Report.aspx.cs">
+      <DependentUpon>Abondoned_Cart_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales_Report\Abondoned_Cart_Report.aspx.designer.cs">
+      <DependentUpon>Abondoned_Cart_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Report\Conversion_Rate_Report.aspx.cs">
+      <DependentUpon>Conversion_Rate_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales_Report\Conversion_Rate_Report.aspx.designer.cs">
+      <DependentUpon>Conversion_Rate_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Report\Customer_Lifetime_Value_Report.aspx.cs">
+      <DependentUpon>Customer_Lifetime_Value_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales_Report\Customer_Lifetime_Value_Report.aspx.designer.cs">
+      <DependentUpon>Customer_Lifetime_Value_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Report\Daily_Weekly_Monthly_Sales_Report.aspx.cs">
+      <DependentUpon>Daily_Weekly_Monthly_Sales_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales_Report\Daily_Weekly_Monthly_Sales_Report.aspx.designer.cs">
+      <DependentUpon>Daily_Weekly_Monthly_Sales_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Report\Discount_Coupon_Report.aspx.cs">
+      <DependentUpon>Discount_Coupon_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales_Report\Discount_Coupon_Report.aspx.designer.cs">
+      <DependentUpon>Discount_Coupon_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Report\Inventory_Stock_Report.aspx.cs">
+      <DependentUpon>Inventory_Stock_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales_Report\Inventory_Stock_Report.aspx.designer.cs">
+      <DependentUpon>Inventory_Stock_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Report\Orders_Report.aspx.cs">
+      <DependentUpon>Orders_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales_Report\Orders_Report.aspx.designer.cs">
+      <DependentUpon>Orders_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Report\Payment_Method_Report.aspx.cs">
+      <DependentUpon>Payment_Method_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales_Report\Payment_Method_Report.aspx.designer.cs">
+      <DependentUpon>Payment_Method_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Report\Profit_Margin_Report.aspx.cs">
+      <DependentUpon>Profit_Margin_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales_Report\Profit_Margin_Report.aspx.designer.cs">
+      <DependentUpon>Profit_Margin_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Report\Reports_Main_Page.aspx.cs">
+      <DependentUpon>Reports_Main_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales_Report\Reports_Main_Page.aspx.designer.cs">
+      <DependentUpon>Reports_Main_Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Report\Returns_Refunds_Report.aspx.cs">
+      <DependentUpon>Returns_Refunds_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales_Report\Returns_Refunds_Report.aspx.designer.cs">
+      <DependentUpon>Returns_Refunds_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Report\Sales_By_Category_Report.aspx.cs">
+      <DependentUpon>Sales_By_Category_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales_Report\Sales_By_Category_Report.aspx.designer.cs">
+      <DependentUpon>Sales_By_Category_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Report\Sales_By_Channel_Report.aspx.cs">
+      <DependentUpon>Sales_By_Channel_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales_Report\Sales_By_Channel_Report.aspx.designer.cs">
+      <DependentUpon>Sales_By_Channel_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Report\Sales_By_Customer_Report.aspx.cs">
+      <DependentUpon>Sales_By_Customer_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales_Report\Sales_By_Customer_Report.aspx.designer.cs">
+      <DependentUpon>Sales_By_Customer_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Report\Sales_By_Region_Report.aspx.cs">
+      <DependentUpon>Sales_By_Region_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales_Report\Sales_By_Region_Report.aspx.designer.cs">
+      <DependentUpon>Sales_By_Region_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Report\Sales_By_Specific_Category_Report.aspx.cs">
+      <DependentUpon>Sales_By_Specific_Category_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales_Report\Sales_By_Specific_Category_Report.aspx.designer.cs">
+      <DependentUpon>Sales_By_Specific_Category_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Report\Sales_By_Specific_Product_Report.aspx.cs">
+      <DependentUpon>Sales_By_Specific_Product_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales_Report\Sales_By_Specific_Product_Report.aspx.designer.cs">
+      <DependentUpon>Sales_By_Specific_Product_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Report\Sales_By_Top_Product_Report.aspx.cs">
+      <DependentUpon>Sales_By_Top_Product_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales_Report\Sales_By_Top_Product_Report.aspx.designer.cs">
+      <DependentUpon>Sales_By_Top_Product_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Report\Total_Sales_Report.aspx.cs">
+      <DependentUpon>Total_Sales_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales_Report\Total_Sales_Report.aspx.designer.cs">
+      <DependentUpon>Total_Sales_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Main_Setting_Page.aspx.cs">
+      <DependentUpon>Main_Setting_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Settings\Main_Setting_Page.aspx.designer.cs">
+      <DependentUpon>Main_Setting_Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sign_in\Sign_in.aspx.cs">
+      <DependentUpon>Sign_in.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sign_in\Sign_in.aspx.designer.cs">
+      <DependentUpon>Sign_in.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sign_up\Sign_up.aspx.cs">
+      <DependentUpon>Sign_up.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sign_up\Sign_up.aspx.designer.cs">
+      <DependentUpon>Sign_up.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Statement\Statement.aspx.cs">
+      <DependentUpon>Statement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Statement\Statement.aspx.designer.cs">
+      <DependentUpon>Statement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Statement\View_Statement.aspx.cs">
+      <DependentUpon>View_Statement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Statement\View_Statement.aspx.designer.cs">
+      <DependentUpon>View_Statement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\air purifier.webp" />
+    <Content Include="images\DSLR Camera.webp" />
+    <Content Include="chart_script\apexcharts.js\.codeclimate.yml" />
+    <Content Include="chart_script\apexcharts.js\.editorconfig" />
+    <Content Include="chart_script\apexcharts.js\.eslintignore" />
+    <Content Include="chart_script\apexcharts.js\.gitattributes" />
+    <Content Include="chart_script\apexcharts.js\.github\FUNDING.yml" />
+    <Content Include="chart_script\apexcharts.js\.github\ISSUE_TEMPLATE\bug-report.md" />
+    <Content Include="chart_script\apexcharts.js\.github\ISSUE_TEMPLATE\config.yml" />
+    <Content Include="chart_script\apexcharts.js\.github\ISSUE_TEMPLATE\feature-request.md" />
+    <Content Include="chart_script\apexcharts.js\.github\workflows\ci.yml" />
+    <Content Include="chart_script\apexcharts.js\.github\workflows\codeql-analysis.yml" />
+    <Content Include="chart_script\apexcharts.js\.github\workflows\lint.yml" />
+    <Content Include="chart_script\apexcharts.js\.github\workflows\stale.yml" />
+    <Content Include="chart_script\apexcharts.js\.gitignore" />
+    <Content Include="chart_script\apexcharts.js\.npmignore" />
+    <Content Include="chart_script\apexcharts.js\.npmrc" />
+    <Content Include="chart_script\apexcharts.js\.prettierignore" />
+    <Content Include="chart_script\apexcharts.js\.travis.yml" />
+    <Content Include="chart_script\apexcharts.js\.vscode\launch.json" />
+    <Content Include="chart_script\apexcharts.js\.vscode\settings.json" />
+    <Content Include="chart_script\apexcharts.js\CODE_OF_CONDUCT.md" />
+    <Content Include="chart_script\apexcharts.js\CONTRIBUTING.md" />
+    <Content Include="chart_script\apexcharts.js\db.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\ar.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\be-cyrl.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\be-latn.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\ca.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\cs.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\da.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\de.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\el.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\en.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\es.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\et.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\fa.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\fi.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\fr.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\he.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\hi.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\hr.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\hu.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\hy.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\id.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\it.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\ja.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\ka.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\ko.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\lt.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\lv.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\ms.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\nb.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\nl.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\pl.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\pt-br.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\pt.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\rs.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\ru.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\se.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\sk.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\sl.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\sq.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\th.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\tr.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\ua.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\vi.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\zh-cn.json" />
+    <Content Include="chart_script\apexcharts.js\dist\locales\zh-tw.json" />
+    <Content Include="chart_script\apexcharts.js\LICENSE" />
+    <Content Include="chart_script\apexcharts.js\nbproject\project.properties" />
+    <Content Include="chart_script\apexcharts.js\package-lock.json" />
+    <Content Include="chart_script\apexcharts.js\package.json" />
+    <Content Include="chart_script\apexcharts.js\PULL_REQUEST_TEMPLATE.md" />
+    <Content Include="chart_script\apexcharts.js\README.md" />
+    <Content Include="chart_script\apexcharts.js\samples\playground\apexcharts-iframe.vue" />
+    <Content Include="chart_script\apexcharts.js\samples\playground\export-sidebar.vue" />
+    <Content Include="chart_script\apexcharts.js\samples\source\docs.md" />
+    <Content Include="chart_script\apexcharts.js\src\locales\ar.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\be-cyrl.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\be-latn.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\ca.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\cs.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\da.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\de.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\el.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\en.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\es.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\et.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\fa.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\fi.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\fr.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\he.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\hi.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\hr.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\hu.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\hy.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\id.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\it.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\ja.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\ka.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\ko.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\lt.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\lv.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\ms.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\nb.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\nl.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\pl.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\pt-br.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\pt.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\rs.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\ru.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\se.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\sk.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\sl.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\sq.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\th.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\tr.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\ua.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\vi.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\zh-cn.json" />
+    <Content Include="chart_script\apexcharts.js\src\locales\zh-tw.json" />
+    <Content Include="chart_script\apexcharts.js\src\modules\tooltip\README.md" />
+    <Content Include="chart_script\apexcharts.js\yarn.lock" />
+    <None Include="packages.config" />
+    <Content Include="Site.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <TypeScriptCompile Include="chart_script\apexcharts.js\types\apexcharts.d.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61955</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44347/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.5.6.2\build\Microsoft.TypeScript.MSBuild.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.5.6.2\build\Microsoft.TypeScript.MSBuild.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.5.6.2\build\Microsoft.TypeScript.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.5.6.2\build\Microsoft.TypeScript.MSBuild.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.5.6.2\build\Microsoft.TypeScript.MSBuild.targets" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.5.6.2\build\Microsoft.TypeScript.MSBuild.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
